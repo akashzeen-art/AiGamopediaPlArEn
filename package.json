@@ -1,0 +1,16 @@
+{
+  "name": "Poker 365",
+  "version": "1.0.0",
+  "description": "Poker 365 - Game portal with EN/AR support",
+  "engines": {
+    "node": ">=16.x"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'Static site - no build step'"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

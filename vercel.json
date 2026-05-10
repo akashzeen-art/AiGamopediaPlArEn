@@ -1,0 +1,23 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "echo 'Skip install'",
+  "buildCommand": "sh scripts/vercel-build.sh",
+  "outputDirectory": ".vercel/output/static",
+  "rewrites": [
+    { "source": "/ar", "destination": "/index.html" },
+    { "source": "/ar/", "destination": "/index.html" },
+    { "source": "/ar/index.html", "destination": "/index.html" },
+    { "source": "/ar/moreGames.html", "destination": "/moreGames.html" },
+    { "source": "/ar/myAccount.html", "destination": "/myAccount.html" },
+    { "source": "/ar/termsAndConditions.html", "destination": "/termsAndConditions.html" },
+    { "source": "/ar/(.*)", "destination": "/$1" },
+    { "source": "/pl", "destination": "/index.html" },
+    { "source": "/pl/", "destination": "/index.html" },
+    { "source": "/pl/index.html", "destination": "/index.html" },
+    { "source": "/pl/moreGames.html", "destination": "/moreGames.html" },
+    { "source": "/pl/myAccount.html", "destination": "/myAccount.html" },
+    { "source": "/pl/termsAndConditions.html", "destination": "/termsAndConditions.html" },
+    { "source": "/pl/(.*)", "destination": "/$1" }
+  ]
+}
