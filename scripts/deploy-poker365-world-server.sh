@@ -38,4 +38,7 @@ fi
 
 sleep 2
 curl -s "http://127.0.0.1:${PORT}/" | grep '<title>'
+curl -s -o /dev/null -w "moreGames.js: %{http_code}\n" "http://127.0.0.1:${PORT}/moreGames.js"
+curl -s -o /dev/null -w "play365Games.js: %{http_code}\n" "http://127.0.0.1:${PORT}/play365Games.js"
+curl -s -o /dev/null -w "thumbnails: %{http_code}\n" "http://127.0.0.1:${PORT}/thumbnails/aircraft.png"
 echo "==> Done. Point nginx poker365.world -> http://127.0.0.1:${PORT}"

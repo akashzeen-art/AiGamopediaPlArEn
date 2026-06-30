@@ -1,5 +1,3 @@
-import { play365Games } from './play365Games.js';
-
 // Legacy API-sourced games (kept as-is)
 const legacyGamesData = [
   {
@@ -766,19 +764,30 @@ const legacyGamesData = [
   }
 ];
 
-const gamesData = [
-  ...legacyGamesData,
-  ...play365Games.map(({ name, url, thumbnail, categories }) => ({
-    name,
-    url,
-    thumbnail,
-    categories,
-  })),
-];
+let gamesData = [...legacyGamesData];
+
+async function loadPlay365Games() {
+  try {
+    const { play365Games } = await import('./play365Games.js');
+    gamesData = [
+      ...legacyGamesData,
+      ...play365Games.map(({ name, url, thumbnail, categories }) => ({
+        name,
+        url,
+        thumbnail,
+        categories,
+      })),
+    ];
+  } catch (err) {
+    console.warn('Play365 games unavailable, showing legacy games only:', err);
+    gamesData = [...legacyGamesData];
+  }
+}
 
 // Render games
 function renderGames(category = 'all') {
   const container = document.getElementById('games-container');
+  if (!container) return;
   container.innerHTML = '';
 
   const filteredGames = category === 'all' 
@@ -802,7 +811,8 @@ function renderGames(category = 'all') {
 }
 
 // Filter buttons
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadPlay365Games();
   renderGames();
 
   document.querySelectorAll('.filter-btn').forEach(btn => {
