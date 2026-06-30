@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Deploy AiGameopedia to aigamopedia.com (NOT Poker 365 — that belongs on poker365.world)
+# Deploy AiGameopedia to aigamopedia.com (NOT Ai Gamopedia — that belongs on poker365.world)
 # Run on server as root:
 #   bash scripts/deploy-aigamopedia-server.sh
 

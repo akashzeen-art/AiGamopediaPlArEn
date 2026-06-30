@@ -71,5 +71,5 @@ window.I18N_PL = {
   categoryAll: 'Wszystkie gry',
   // Alt text
   gameAlt: 'Gra',
-  logoAlt: 'Logo Poker 365'
+  logoAlt: 'Logo Ai Gamopedia'
 };

@@ -1,4 +1,4 @@
-# Poker 365 - Browse By Genre Section
+# Ai Gamopedia - Browse By Genre Section
 
 ## All Game Categories with Thumbnails and API Links
 

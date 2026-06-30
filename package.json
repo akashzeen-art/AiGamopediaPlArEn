@@ -1,7 +1,7 @@
 {
-  "name": "Poker 365",
+  "name": "Ai Gamopedia",
   "version": "1.0.0",
-  "description": "Poker 365 - Game portal with EN/AR support",
+  "description": "Ai Gamopedia - Game portal with EN/AR support",
   "engines": {
     "node": ">=16.x"
   },

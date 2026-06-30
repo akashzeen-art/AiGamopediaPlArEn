@@ -38,7 +38,7 @@ if (BASE_PATH) {
 app.listen(PORT, '0.0.0.0', () => {
   const host = `http://localhost:${PORT}`;
   const base = host + BASE_PATH;
-  console.log(`Poker 365 running on port ${PORT}`);
+  console.log(`Ai Gamopedia running on port ${PORT}`);
   console.log(`  English: ${base}/`);
   console.log(`  Arabic:  ${base}/ar`);
   console.log(`  Polish:  ${base}/pl`);

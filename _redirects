@@ -1,4 +1,4 @@
-# Poker 365 – Netlify rewrites so /ar (Arabic) works
+# Ai Gamopedia – Netlify rewrites so /ar (Arabic) works
 # 200 = rewrite (serve file, URL stays same)
 
 # Arabic route: serve index.html so JS detects /ar and shows Arabic

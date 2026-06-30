@@ -1,4 +1,4 @@
-# Poker 365 – Netlify config
+# Ai Gamopedia – Netlify config
 # Publish the current directory (no build step)
 [build]
   publish = "."

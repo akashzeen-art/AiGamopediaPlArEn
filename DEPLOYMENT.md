@@ -1,4 +1,4 @@
-# Poker 365 – Deployment Guide (Backend Team)
+# Ai Gamopedia – Deployment Guide (Backend Team)
 
 ## Overview
 
@@ -50,7 +50,7 @@ The repo includes **`vercel.json`** so `/ar` (Arabic) works on Vercel (no 404).
 ### Create / import the project
 
 1. Go to **[vercel.com/new](https://vercel.com/new)** and sign in (e.g. with GitHub).
-2. Under **Import Git Repository**, click **Import** next to **`akashzeen-art/Poker 365`**.  
+2. Under **Import Git Repository**, click **Import** next to **`akashzeen-art/Ai Gamopedia`**.  
    If it doesn’t appear, click **Adjust GitHub App Permissions** and allow Vercel access to the repo, then try again.
 3. **Configure the project:**
    - **Project Name:** set to **`ai-gamopedia`** (or any name; this becomes `ai-gamopedia.vercel.app`).
@@ -65,8 +65,8 @@ The repo includes **`vercel.json`** so `/ar` (Arabic) works on Vercel (no 404).
 
 ### If the project already exists but you can’t find it
 
-- In the Vercel dashboard, check **All** projects or use the search box for **Poker 365** or **Poker 365**.
-- Or go to **[vercel.com/new](https://vercel.com/new)** and import **`akashzeen-art/Poker 365`** again; Vercel will ask whether to add to an existing project or create a new one.
+- In the Vercel dashboard, check **All** projects or use the search box for **Ai Gamopedia** or **Ai Gamopedia**.
+- Or go to **[vercel.com/new](https://vercel.com/new)** and import **`akashzeen-art/Ai Gamopedia`** again; Vercel will ask whether to add to an existing project or create a new one.
 
 ### If you get “Not Found” after deploy
 

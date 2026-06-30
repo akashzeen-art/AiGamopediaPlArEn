@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Deploy Poker 365 to poker365.world (separate port from aigamopedia.com)
+# Deploy Ai Gamopedia to poker365.world (separate port from aigamopedia.com)
 # Run on server as root:
 #   bash scripts/deploy-poker365-world-server.sh
 
@@ -10,7 +10,7 @@ REPO_URL="https://github.com/akashzeen-art/AiGamopediaPlArEn.git"
 PORT="${PORT:-5501}"
 PM2_NAME="${PM2_NAME:-poker365-world}"
 
-echo "==> Deploying Poker 365 to ${APP_DIR} (poker365.world)"
+echo "==> Deploying Ai Gamopedia to ${APP_DIR} (poker365.world)"
 
 mkdir -p "$(dirname "${APP_DIR}")"
 
@@ -27,7 +27,7 @@ git fetch origin main
 git reset --hard origin/main
 npm ci --omit=dev
 
-grep -q "Poker 365" index.html
+grep -q "Ai Gamopedia" index.html
 
 if pm2 describe "${PM2_NAME}" >/dev/null 2>&1; then
   PORT="${PORT}" pm2 restart "${PM2_NAME}" --update-env
