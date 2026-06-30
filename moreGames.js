@@ -1,5 +1,7 @@
-// Game data
-const gamesData = [
+import { play365Games } from './play365Games.js';
+
+// Legacy API-sourced games (kept as-is)
+const legacyGamesData = [
   {
     name: "Mine Rusher",
     url: "https://cdn.timepass.games/games/05cb773c-9b54-4773-aedc-24a42b568584/aee3cd6b-808d-432b-be3d-e0efe6b2f2ee/",
@@ -762,6 +764,16 @@ const gamesData = [
     thumbnail: "https://cdn.timepass.games/images/e0a90418-37ff-415d-b148-4e910ed2ec62.webp",
     categories: ["All Games"]
   }
+];
+
+const gamesData = [
+  ...legacyGamesData,
+  ...play365Games.map(({ name, url, thumbnail, categories }) => ({
+    name,
+    url,
+    thumbnail,
+    categories,
+  })),
 ];
 
 // Render games
